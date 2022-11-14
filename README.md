@@ -1,3 +1,23 @@
+## My Warehouse
+
+Aplikasi My Warehouse adalah aplikasi "inventory management", yaitu manajemen persediaan dimana didalamnya untuk mempermudah admin atau pemilik toko mengorganisir data barang-barangnya.
+
+## Fitur Utama
+- Melihat Detail Produk
+- Melihat Jumlah Produk
+- Mencari Produk
+
+## Anggota Tim
+
+| Nama                         | Role              | GitHub URL                                                     |
+| ---------------------------- | ----------------- | -------------------------------------------------------------- |
+| Adies Wijayanto              | Frontend, Design  | [@]()                                                          |
+| Bintang Mahardhika           | Frontend, Design  | [@BeMahardhika](https://github.com/BeMahardhika)               |
+| Erlin Maresta                | Frontend, Backend | [@erlinmareta](https://github.com/vektormuhammadlutfi)         |
+| Feminda Dwi Sismayanti       | Lead, Backend     | [@Femindadwixx](https://github.com/adeahmadfaisal)             |
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
