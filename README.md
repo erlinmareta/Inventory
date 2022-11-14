@@ -13,8 +13,8 @@ Aplikasi My Warehouse adalah aplikasi "inventory management", yaitu manajemen pe
 | ---------------------------- | ----------------- | -------------------------------------------------------------- |
 | Adies Wijayanto              | Frontend, Design  | [@]()                                                          |
 | Bintang Mahardhika           | Frontend, Design  | [@BeMahardhika](https://github.com/BeMahardhika)               |
-| Erlin Maresta                | Frontend, Backend | [@erlinmareta](https://github.com/vektormuhammadlutfi)         |
-| Feminda Dwi Sismayanti       | Lead, Backend     | [@Femindadwixx](https://github.com/adeahmadfaisal)             |
+| Erlin Maresta                | Frontend, Backend | [@erlinmareta](https://github.com/erlinmareta)                 |
+| Feminda Dwi Sismayanti       | Lead, Backend     | [@femindadwis](https://github.com/femindadwis)                 |
 
 ## Tech Stack
 
