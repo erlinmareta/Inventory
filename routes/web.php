@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\JenisBarangController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,7 +21,12 @@ Route::get('/', function () {
 // });
 Route::group(['middleware' => 'auth'], function(){
     Route::get('/dashboard', function(){return view('dashboard');});
-
+    Route::get('/jenisbarang','JenisBarangController@index');
+    Route::get('/jenisbarang/tambah','JenisBarangController@tambah');
+    Route::post('/jenisbarang/store','JenisBarangController@store');
+    Route::get('/jenisbarang/edit/{id}','JenisBarangController@edit');
+    Route::post('/jenisbarang/update','JenisBarangController@update');
+    Route::get('/jenisbarang/hapus/{id}','JenisBarangController@hapus');
 });
 
 
