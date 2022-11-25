@@ -286,7 +286,7 @@
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="/jenisbarang">Jenis Barang</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Jenis Satuan</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/satuan/satuan">Jenis Satuan</a></li>
                 <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">User</a></li>
               </ul>
             </div>

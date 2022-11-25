@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JenisBarangController;
+use App\Http\Controllers\SatuanController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +29,12 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/jenisbarang/edit/{id}','JenisBarangController@edit');
     Route::post('/jenisbarang/update','JenisBarangController@update');
     Route::get('/jenisbarang/hapus/{id}','JenisBarangController@hapus');
+    Route::get('/satuan/satuan','SatuanController@index');
+    Route::get('/satuan/tambah','SatuanController@tambah');
+    Route::post('/satuan/store','SatuanController@store');
+    Route::get('/satuan/edit/{id}','SatuanController@edit');
+    Route::post('/satuan/update','SatuanController@update');
+    Route::get('/satuan/hapus/{id}','SatuanController@hapus');
 });
 
 
