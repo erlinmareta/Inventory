@@ -11,7 +11,7 @@ Aplikasi "MyV" singkatan dari My Ventory adalah aplikasi "inventory management",
 
 | Nama                         | Role              | GitHub URL                                                     |
 | ---------------------------- | ----------------- | -------------------------------------------------------------- |
-| Adies Wijayanto              | Frontend, Design  | [@]()                                                          |
+| Adies Wijayanto              | Frontend, Design  | [@Adieswijayanto](https://github.com/Adieswijayanto)                                                          |
 | Bintang Mahardhika           | Frontend, Design  | [@BeMahardhika](https://github.com/BeMahardhika)               |
 | Erlin Maresta                | Frontend, Backend | [@erlinmareta](https://github.com/erlinmareta)                 |
 | Feminda Dwi Sismayanti       | Lead, Backend     | [@femindadwis](https://github.com/femindadwis)                 |
