@@ -16,6 +16,7 @@
                     <table class="table table-bordered">
                       <thead>
                         <tr>
+                        <?php $no=1; ?>
                           <th>No</th>
                           <th>Jenis Barang</th>
                           <th>Action</th>
@@ -24,7 +25,7 @@
                       <tbody>
                       @foreach($jenisbarang as $j)
                         <tr>
-                          <td>{{ $j->id }}</td>
+                          <td>{{ $no++ }}</td>
                           <td>{{ $j->nama }} </td>
                           <td>
 				<a href="/jenisbarang/edit/{{ $j->id }}">Edit</a>

@@ -13,13 +13,13 @@ class JenisBarangController extends Controller
     	$jenisbarang = DB::table('jenisbarang')->get();
  
     	// mengirim data pegawai ke view index
-    	return view('jenisbarang',['jenisbarang' => $jenisbarang]);
+    	return view('jenis/jenisbarang',['jenisbarang' => $jenisbarang]);
 }
 public function tambah()
 {
  
 	// memanggil view tambah
-	return view('tambahjenis');
+	return view('jenis/tambahjenis');
  
 }
 public function store(Request $request)
@@ -29,7 +29,7 @@ public function store(Request $request)
 		'nama' => $request->nama,
 	]);
 	// alihkan halaman ke halaman pegawai
-	return redirect('/jenisbarang');
+	return redirect('/jenis/jenisbarang');
  
 }
 public function edit($id)
@@ -37,7 +37,7 @@ public function edit($id)
 
 	$jenisbarang = DB::table('jenisbarang')->where('id',$id)->get();
 	
-	return view('editjenis',['jenisbarang' => $jenisbarang]);
+	return view('jenis/editjenis',['jenisbarang' => $jenisbarang]);
  
 }
 public function update(Request $request)
@@ -47,7 +47,7 @@ public function update(Request $request)
 		'nama' => $request->nama,
 	]);
 	// alihkan halaman ke halaman pegawai
-	return redirect('/jenisbarang');
+	return redirect('/jenis/jenisbarang');
 }
 public function hapus($id)
 {
@@ -55,6 +55,6 @@ public function hapus($id)
 	DB::table('jenisbarang')->where('id',$id)->delete();
 		
 	// alihkan halaman ke halaman pegawai
-	return redirect('/jenisbarang');
+	return redirect('/jenis/jenisbarang');
 }
 }

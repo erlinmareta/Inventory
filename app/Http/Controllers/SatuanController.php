@@ -59,6 +59,7 @@ public function hapus($id)
 		
 	// alihkan halaman ke halaman pegawai
 	return redirect('/satuan/satuan');
+
 }
 
 }

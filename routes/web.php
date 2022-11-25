@@ -23,7 +23,7 @@ Route::get('/', function () {
 // });
 Route::group(['middleware' => 'auth'], function(){
     Route::get('/dashboard', function(){return view('dashboard');});
-    Route::get('/jenisbarang','JenisBarangController@index');
+    Route::get('/jenis/jenisbarang','JenisBarangController@index');
     Route::get('/jenisbarang/tambah','JenisBarangController@tambah');
     Route::post('/jenisbarang/store','JenisBarangController@store');
     Route::get('/jenisbarang/edit/{id}','JenisBarangController@edit');
