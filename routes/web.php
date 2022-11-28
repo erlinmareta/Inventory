@@ -5,6 +5,7 @@ use App\Http\Controllers\JenisBarangController;
 use App\Http\Controllers\SatuanController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\KaryawanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +55,15 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/barang/barang','BarangController@index');
     Route::get('/barang/tambah','BarangController@tambah');
     Route::post('/barang/store','BarangController@store');
+
+    //Karyawan
+    Route::get('/karyawan/karyawan','KaryawanController@index');
+    Route::get('/karyawan/tambah','KaryawanController@tambah');
+    Route::post('/karyawan/store','KaryawanController@store');
+    Route::get('/karyawan/edit/{id}','KaryawanController@edit');
+    Route::post('/karyawan/update','KaryawanController@update');
+    Route::get('/karyawan/hapus/{id}','KaryawanController@hapus');
+    Route::get('/karyawan/detail/{id}','KaryawanController@detail');
 });
 
 

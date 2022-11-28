@@ -19,11 +19,7 @@
                             <h3 class="rate-percentage">5</h3>
                           
                           </div>
-                          <div>
-                            <p class="statistics-title">Data Karyawan</p>
-                            <h3 class="rate-percentage">12</h3>
-                          
-                          </div>
+
                           <div>
                             <p class="statistics-title">Data Barang</p>
                             <h3 class="rate-percentage">150</h3>
