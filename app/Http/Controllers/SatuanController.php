@@ -26,11 +26,11 @@ public function tambah()
 }
 public function store(Request $request)
 {
-	// insert data ke table pegawai
+	// insert data ke table satuan
 	DB::table('satuan')->insert([
 		'nama' => $request->nama,
 	]);
-	// alihkan halaman ke halaman pegawai
+	// alihkan halaman ke halaman satuan
 	return redirect('/satuan/satuan');
  
 }
@@ -45,11 +45,11 @@ public function edit($id)
 }
 public function update(Request $request)
 {
-	// update data pegawai
+	// update data satuan
 	DB::table('satuan')->where('id',$request->id)->update([
 		'nama' => $request->nama,
 	]);
-	// alihkan halaman ke halaman pegawai
+	// alihkan halaman ke halaman satuan
 	return redirect('/satuan/satuan');
 }
 public function hapus($id)
@@ -57,7 +57,7 @@ public function hapus($id)
 	// menghapus data pegawai berdasarkan id yang dipilih
 	DB::table('satuan')->where('id',$id)->delete();
 		
-	// alihkan halaman ke halaman pegawai
+	// alihkan halaman ke halaman satuan
 	return redirect('/satuan/satuan');
 
 }

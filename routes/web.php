@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JenisBarangController;
 use App\Http\Controllers\SatuanController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\BarangController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +49,11 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/user/edit/{id}','UserController@edit');
     Route::post('/user/update','UserController@update');
     Route::get('/user/hapus/{id}','UserController@hapus');
+
+    //barang 
+    Route::get('/barang/barang','BarangController@index');
+    Route::get('/barang/tambah','BarangController@tambah');
+    Route::post('/barang/store','BarangController@store');
 });
 
 

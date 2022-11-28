@@ -42,19 +42,19 @@ public function edit($id)
 }
 public function update(Request $request)
 {
-	// update data pegawai
+	// update data jenis barang
 	DB::table('jenisbarang')->where('id',$request->id)->update([
 		'nama' => $request->nama,
 	]);
-	// alihkan halaman ke halaman pegawai
+	// alihkan halaman ke halaman jenis barang 
 	return redirect('/jenis/jenisbarang');
 }
 public function hapus($id)
 {
-	// menghapus data pegawai berdasarkan id yang dipilih
+	// menghapus data jenis barang berdasarkan id yang dipilih
 	DB::table('jenisbarang')->where('id',$id)->delete();
 		
-	// alihkan halaman ke halaman pegawai
+	// alihkan halaman ke halaman jenis barang
 	return redirect('/jenis/jenisbarang');
 }
 }

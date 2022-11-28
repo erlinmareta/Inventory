@@ -288,28 +288,13 @@
                 <li class="nav-item"> <a class="nav-link" href="/jenis/jenisbarang">Jenis Barang</a></li>
                 <li class="nav-item"> <a class="nav-link" href="/satuan/satuan">Jenis Satuan</a></li>
                 <li class="nav-item"> <a class="nav-link" href="/user/user">User</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/barang/barang">Data Barang</a></li>
+                <li class="nav-item"> <a class="nav-link" href="">Data Karyawan</a></li>
+                <li class="nav-item"> <a class="nav-link" href="">Data Supplier</a></li>
               </ul>
             </div>
           </li>
           <li class="nav-item nav-category">Datas</li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
-              <i class="menu-icon mdi mdi-card-text-outline"></i>
-              <span class="menu-title">Data Karyawan</span></a>
-
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-              <i class="menu-icon mdi mdi-card-text-outline"></i>
-              <span class="menu-title">Data Supplier</span>
-</a>
-
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
-              <i class="menu-icon mdi mdi-table"></i>
-              <span class="menu-title">Data Barang</span>
-             
-            </a>
-          
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
               <i class="menu-icon mdi mdi-layers-outline"></i>

@@ -27,13 +27,13 @@ return view('user/tambahuser');
 
 public function store(Request $request)
 {
-// insert data ke table pegawai
+// insert data ke table user
 DB::table('users')->insert([
     'name' => $request->name,
     'email' => $request->email,
     'password' => $request->password,
 ]);
-// alihkan halaman ke halaman pegawai
+// alihkan halaman user
 return redirect('/user/user');
 
 }
@@ -50,22 +50,22 @@ return view('user/edituser',['user' => $user]);
 
 public function update(Request $request)
 {
-// update data pegawai
+// update data user
 DB::table('users')->where('id',$request->id)->update([
     'name' => $request->name,
     'email' => $request->email,
     'password' => $request->password,
 ]);
-// alihkan halaman ke halaman pegawai
+// alihkan halaman ke halaman user
 return redirect('/user/user');
 }
 
 public function hapus($id)
 {
-// menghapus data pegawai berdasarkan id yang dipilih
+// menghapus data user berdasarkan id yang dipilih
 DB::table('users')->where('id',$id)->delete();
     
-// alihkan halaman ke halaman pegawai
+// alihkan halaman ke halaman user
 return redirect('/user/user');
 
 }
