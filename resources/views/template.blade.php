@@ -290,7 +290,7 @@
                 <li class="nav-item"> <a class="nav-link" href="/user/user">User</a></li>
                 <li class="nav-item"> <a class="nav-link" href="/barang/barang">Data Barang</a></li>
                 <li class="nav-item"> <a class="nav-link" href="">Data Karyawan</a></li>
-                <li class="nav-item"> <a class="nav-link" href="">Data Supplier</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/supplier/supplier">Data Supplier</a></li>
               </ul>
             </div>
           </li>

@@ -5,6 +5,7 @@ use App\Http\Controllers\JenisBarangController;
 use App\Http\Controllers\SatuanController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\SuppplierController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +55,15 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/barang/barang','BarangController@index');
     Route::get('/barang/tambah','BarangController@tambah');
     Route::post('/barang/store','BarangController@store');
+
+    //supplier 
+    Route::get('/supplier/supplier','SupplierController@index');
+    Route::get('/supplier/tambah','SupplierController@tambah');
+    Route::post('/supplier/store','SupplierController@store');
+    Route::get('/supplier/edit/{id}','SupplierController@edit');
+    Route::post('/supplier/update','SupplierController@update');
+    Route::get('/supplier/hapus/{id}','SupplierController@hapus');
+    
 });
 
 
