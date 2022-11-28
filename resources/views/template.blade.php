@@ -289,8 +289,13 @@
                 <li class="nav-item"> <a class="nav-link" href="/satuan/satuan">Jenis Satuan</a></li>
                 <li class="nav-item"> <a class="nav-link" href="/user/user">User</a></li>
                 <li class="nav-item"> <a class="nav-link" href="/barang/barang">Data Barang</a></li>
+<<<<<<< HEAD
                 <li class="nav-item"> <a class="nav-link" href="/karyawan/karyawan">Data Karyawan</a></li>
                 <li class="nav-item"> <a class="nav-link" href="">Data Supplier</a></li>
+=======
+                <li class="nav-item"> <a class="nav-link" href="">Data Karyawan</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/supplier/supplier">Data Supplier</a></li>
+>>>>>>> 395f5a1ce3ba4edca0921fe2f5b22f54335c4a93
               </ul>
             </div>
           </li>

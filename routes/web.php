@@ -5,7 +5,11 @@ use App\Http\Controllers\JenisBarangController;
 use App\Http\Controllers\SatuanController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BarangController;
+<<<<<<< HEAD
 use App\Http\Controllers\KaryawanController;
+=======
+use App\Http\Controllers\SuppplierController;
+>>>>>>> 395f5a1ce3ba4edca0921fe2f5b22f54335c4a93
 
 /*
 |--------------------------------------------------------------------------
@@ -56,6 +60,7 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/barang/tambah','BarangController@tambah');
     Route::post('/barang/store','BarangController@store');
 
+<<<<<<< HEAD
     //Karyawan
     Route::get('/karyawan/karyawan','KaryawanController@index');
     Route::get('/karyawan/tambah','KaryawanController@tambah');
@@ -64,6 +69,16 @@ Route::group(['middleware' => 'auth'], function(){
     Route::post('/karyawan/update','KaryawanController@update');
     Route::get('/karyawan/hapus/{id}','KaryawanController@hapus');
     Route::get('/karyawan/detail/{id}','KaryawanController@detail');
+=======
+    //supplier 
+    Route::get('/supplier/supplier','SupplierController@index');
+    Route::get('/supplier/tambah','SupplierController@tambah');
+    Route::post('/supplier/store','SupplierController@store');
+    Route::get('/supplier/edit/{id}','SupplierController@edit');
+    Route::post('/supplier/update','SupplierController@update');
+    Route::get('/supplier/hapus/{id}','SupplierController@hapus');
+    
+>>>>>>> 395f5a1ce3ba4edca0921fe2f5b22f54335c4a93
 });
 
 
