@@ -296,30 +296,18 @@
           </li>
           <li class="nav-item nav-category">Datas</li>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+            <a class="nav-link" href="#" aria-controls="icons">
               <i class="menu-icon mdi mdi-layers-outline"></i>
               <span class="menu-title">Barang Keluar</span>
             </a>
+            
 
             <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+            <a class="nav-link" href="#"  aria-controls="icons">
               <i class="menu-icon mdi mdi-layers-outline"></i>
               <span class="menu-title">Barang Masuk</span>
             </a>
        
-          <li class="nav-item nav-category">Pages</li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-              <i class="menu-icon mdi mdi-account-circle-outline"></i>
-              <span class="menu-title">User Pages</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="auth">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-              </ul>
-            </div>
-          </li>
           <li class="nav-item nav-category">Laporan</li>
           <li class="nav-item">
             <a class="nav-link" href=" ">
