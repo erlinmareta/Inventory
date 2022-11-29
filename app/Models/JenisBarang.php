@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Barang;
 
-class Supplier extends Model
+class JenisBarang extends Model
 {
-    protected $table = "supplier" ;
+    protected $table = "jenisbarang" ;
     protected $primarykey = "id" ;
     protected $fillable = [
-        'id', 'nama', 'alamat', 'hp'
+        'id', 'nama'
     ];
 
     public function Barang()

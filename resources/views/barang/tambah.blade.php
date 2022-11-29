@@ -27,18 +27,18 @@
                  </div>
 
                  <label class="sr-only" for="inlineFormInputName2">Supplier</label>
-                        <input type="text" name="nama" class="form-control mb-2 mr-sm-2" id="nama" placeholder="Nama Supplier" required="required">
+                        <select type="text" name="id_suplier" class="form-control mb-2 mr-sm-2" id="id_suplier" placeholder="Nama Supplier" required="required">
+                           <option >Pilih Supplier</option>
+                           @foreach ($barang as $b)
+                           <option value="{{ $b->id}}">{{$b->supplier->nama}}</option>
+                           @endforeach
+                        </select>
                     <div class="input-group mb-2 mr-sm-2">
                  <div class="input-group-prepend">                   
                     </div>
                  </div>
 
-                 <label class="sr-only" for="inlineFormInputName2">Jenis Barang</label>
-                        <input type="text" name="nama" class="form-control mb-2 mr-sm-2" id="nama" placeholder="Jenis barang" required="required">
-                    <div class="input-group mb-2 mr-sm-2">
-                 <div class="input-group-prepend">                   
-                    </div>
-                 </div>
+                 
 
                     <button type="submit" class="btn btn-primary mb-2">Submit</button>
                   </form>

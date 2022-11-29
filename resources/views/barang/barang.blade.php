@@ -22,10 +22,27 @@
                           <th>Kode</th>
                           <th>Supllier</th>
                           <th>Jenis Barang</th>
+                          <th>Action</th>
                         </tr>
                       </thead>
                       <tbody>
-                      
+                      @foreach($barang as $b)
+                        <tr>
+                          <td>{{ $no++ }}</td>
+                          <td>{{ $b->nama }} </td>
+                          <td>{{ $b->kode }} </td>
+                          <td>{{ $b->supplier->nama }} </td>
+                          <td>{{ $b->id_jenis }}</td>
+
+                          
+                          <td>
+				<a href="/barang/edit/{{ $b->id }}">Edit</a>
+				|
+				<a href="/barang/hapus/{{ $b->id }}">Hapus</a>
+			</td>            
+                        </tr>  
+                      </tbody>
+                      @endforeach
                     </table>
                     
                   </div>
