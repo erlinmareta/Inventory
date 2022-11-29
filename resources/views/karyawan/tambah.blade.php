@@ -23,13 +23,18 @@
                     </div>
 
                     <div class="form-group">
+                      <label for="exampleInputEmail3">Alamat</label>
+                      <input type="name" class="form-control" name="alamat" id="alamat" placeholder="Alamat" required="required">
+                    </div>
+
+                    <div class="form-group">
                       <label for="exampleInputEmail3">Tanggal Masuk Kerja</label>
                       <input type="date" required="required" class="form-control" id="tanggal" name="tgl_daftar" value="<?=date('Y-m-d')?>">
                     </div>
 
                     <div class="form-group">
                       <label for="exampleInputEmail3">No. Hp</label>
-                      <input type="name" class="form-control" name="hp" id="hp" placeholder="Nama" required="required">
+                      <input type="name" class="form-control" name="hp" id="hp" placeholder="No.HP" required="required">
                     </div>
                   
                     <button type="submit" class="btn btn-primary me-2">Submit</button>

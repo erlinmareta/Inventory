@@ -31,6 +31,7 @@ public function store(Request $request)
 DB::table('karyawan')->insert([
     'nip' => $request->nip,
     'nama' => $request->nama,
+    'alamat' => $request->alamat,
     'tanggal' => $request->tanggal,
     'hp' => $request->hp,
 ]);
@@ -55,6 +56,7 @@ public function update(Request $request)
 DB::table('karyawan')->where('id',$request->id)->update([
     'nip' => $request->nip,
     'nama' => $request->nama,
+    'alamat' => $request->alamat,
     'tanggal' => $request->tanggal,
     'hp' => $request->hp,
 ]);
@@ -79,4 +81,5 @@ public function detail($id)
     return view('karyawan/detail',['karyawan' => $karyawan]);
 
 }
+
 }
