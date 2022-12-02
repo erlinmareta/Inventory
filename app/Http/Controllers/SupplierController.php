@@ -6,12 +6,14 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\DB;
 
+use App\Models\Supplier;
+
 class SupplierController extends Controller
 {
     public function index()
     {
     	// mengambil data dari table pegawai
-    	$supplier = DB::table('supplier')->get();
+    	$supplier = Supplier::all();
  
     	// mengirim data pegawai ke view index
     	return view('supplier/supplier',['supplier' => $supplier]);
@@ -27,11 +29,12 @@ public function tambah()
 public function store(Request $request)
 {
 	// insert data ke table satuan
-	DB::table('supplier')->insert([
-		'nama' => $request->nama,
-        'alamat' => $request->alamat,
-        'hp' => $request->hp,
-	]);
+	$supplier = new Supplier();
+	$supplier->nama = $request->nama;
+	$supplier->alamat = $request->alamat;
+	$supplier->hp = $request->hp;
+	$supplier->save();
+	
 	// alihkan halaman ke halaman satuan
 	return redirect('/supplier/supplier');
  

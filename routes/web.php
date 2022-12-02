@@ -58,7 +58,7 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/barang/tambah','BarangController@tambah');
     Route::post('/barang/store','BarangController@store');
     Route::get('/barang/edit/{id}','BarangController@edit');
-    Route::post('/barang/update','BarangController@update');
+    Route::post('/barang/update{id}','BarangController@update');
     Route::get('/barang/hapus/{id}','BarangController@hapus');
     
 

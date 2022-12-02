@@ -15,11 +15,9 @@ class CreateBarangTable extends Migration
     {
         Schema::create('barang', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_jenis')->nullable();
-            $table->integer('id_suplier')->nullable();
+            $table->integer('id_suplier');
+            $table->string('name');
             $table->string('kode');
-            $table->string('nama');
-            $table->binary('image');
             $table->timestamps();
         });
     }

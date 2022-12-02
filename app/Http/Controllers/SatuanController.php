@@ -27,10 +27,10 @@ public function tambah()
 public function store(Request $request)
 {
 	// insert data ke table satuan
-	DB::table('satuan')->insert([
-		'nama' => $request->nama,
-	]);
-	// alihkan halaman ke halaman satuan
+	$satuan = new Satuan();
+	$satuan->nama = $request->nama;
+	$supplier->save();
+	
 	return redirect('/satuan/satuan');
  
 }

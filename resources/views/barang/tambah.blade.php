@@ -13,28 +13,30 @@
                     {{ csrf_field() }}
                   <form class="form-inline">
                     <label class="sr-only" for="inlineFormInputName2">Nama Barang</label>
-                        <input type="text" name="nama" class="form-control mb-2 mr-sm-2" id="nama" placeholder="Nama Barang" required="required">
+                        <input type="text" name="name" class="form-control mb-2 mr-sm-2" id="name" placeholder="Nama Barang" required="required">
                     <div class="input-group mb-2 mr-sm-2">
                  <div class="input-group-prepend">                   
                     </div>
                  </div>
                  
                  <label class="sr-only" for="inlineFormInputName2">Kode Barang</label>
-                        <input type="text" name="nama" class="form-control mb-2 mr-sm-2" id="nama" placeholder="Kode Barang" required="required">
+                        <input type="text" name="kode" class="form-control mb-2 mr-sm-2" id="kode" placeholder="Kode Barang" required="required">
                     <div class="input-group mb-2 mr-sm-2">
                  <div class="input-group-prepend">                   
                     </div>
                  </div>
 
                  <label class="sr-only" for="inlineFormInputName2">Supplier</label>
-                        <select type="text" name="id_suplier" class="form-control mb-2 mr-sm-2" id="id_suplier" placeholder="Nama Supplier" required="required">
+                        <select type="text" name="nama" class="form-control mb-2 mr-sm-2" id="nama" placeholder="Nama Supplier" required="required">
                            <option >Pilih Supplier</option>
-                           @foreach ($barang as $b)
-                           <option value="{{ $b->id}}">{{$b->supplier->nama}}</option>
+                           @foreach ($supplier as $s)
+                           <option value="{{ $s->id}}">{{$s->nama}}</option>
                            @endforeach
                         </select>
                     <div class="input-group mb-2 mr-sm-2">
-                 <div class="input-group-prepend">                   
+                 <div class="input-group-prepend">  
+                  
+                 
                     </div>
                  </div>
 
