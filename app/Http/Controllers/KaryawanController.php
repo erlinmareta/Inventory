@@ -32,7 +32,7 @@ DB::table('karyawan')->insert([
     'nip' => $request->nip,
     'nama' => $request->nama,
     'alamat' => $request->alamat,
-    'tanggal' => $request->tanggal,
+    'date' => $request->date,
     'hp' => $request->hp,
 ]);
 // alihkan halaman user
@@ -57,7 +57,7 @@ DB::table('karyawan')->where('id',$request->id)->update([
     'nip' => $request->nip,
     'nama' => $request->nama,
     'alamat' => $request->alamat,
-    'tanggal' => $request->tanggal,
+    'date' => $request->date,
     'hp' => $request->hp,
 ]);
 // alihkan halaman ke halaman user

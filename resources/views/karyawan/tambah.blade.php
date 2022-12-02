@@ -29,7 +29,7 @@
 
                     <div class="form-group">
                       <label for="exampleInputEmail3">Tanggal Masuk Kerja</label>
-                      <input type="date" required="required" class="form-control" id="tanggal" name="tgl_daftar" value="<?=date('Y-m-d')?>">
+                      <input type="date" class="form-control" id="date" name="date" value="<?=date('Y-m-d')?>" required="required">
                     </div>
 
                     <div class="form-group">

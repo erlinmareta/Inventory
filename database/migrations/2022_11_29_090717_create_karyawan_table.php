@@ -18,8 +18,8 @@ class CreateKaryawanTable extends Migration
             $table->integer('nip')->nullable();
             $table->string('nama');
             $table->string('alamat');
-            $table->date('tanggal')->nullable();
-            $table->integer('hp')->nullable();
+            $table->date('date');
+            $table->biginteger('hp');
             $table->timestamps();
         });
     }
