@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\DB;
 
+use App\Models\Satuan;
+
 class SatuanController extends Controller
 {
     public function index()
@@ -26,12 +28,21 @@ public function tambah()
 }
 public function store(Request $request)
 {
+<<<<<<< HEAD
 	// insert data ke table pegawai
 	DB::table('satuan')->insert([
 		'nama' => $request->nama,
 	]);
 	// alihkan halaman ke halaman pegawai
 	return redirect('/satuan/satuan');
+=======
+	// insert data ke table satuan
+	$satuan = new Satuan();
+	$satuan->nama = $request->nama;
+	$satuan->save();
+	
+	return redirect('/satuan/satuan')->with('success', 'Berhasil ditambahkan!');
+>>>>>>> a5539569d5d45a334379173989829746a150a576
  
 }
 
@@ -50,7 +61,7 @@ public function update(Request $request)
 		'nama' => $request->nama,
 	]);
 	// alihkan halaman ke halaman satuan
-	return redirect('/satuan/satuan');
+	return redirect('/satuan/satuan')->with('success', 'Data Berhasil diubah!');
 }
 public function hapus($id)
 {
@@ -58,7 +69,7 @@ public function hapus($id)
 	DB::table('satuan')->where('id',$id)->delete();
 		
 	// alihkan halaman ke halaman satuan
-	return redirect('/satuan/satuan');
+	return redirect('/satuan/satuan')->with('success', 'Data Berhasil dihapus!');
 
 }
 

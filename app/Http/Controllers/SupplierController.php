@@ -36,7 +36,7 @@ public function store(Request $request)
 	$supplier->save();
 	
 	// alihkan halaman ke halaman satuan
-	return redirect('/supplier/supplier');
+	return redirect('/supplier/supplier')->with('success', 'Berhasil ditambahkan!');
  
 }
 
@@ -57,7 +57,7 @@ public function update(Request $request)
         'hp' => $request->hp,
 	]);
 	// alihkan halaman ke halaman satuan
-	return redirect('/supplier/supplier');
+	return redirect('/supplier/supplier')->with('success', 'Data Berhasil diubah!');
 }
 public function hapus($id)
 {
@@ -65,7 +65,7 @@ public function hapus($id)
 	DB::table('supplier')->where('id',$id)->delete();
 		
 	// alihkan halaman ke halaman satuan
-	return redirect('/supplier/supplier');
+	return redirect('/supplier/supplier')->with('success', 'Data Berhasil dihapus!');
 
 }
 

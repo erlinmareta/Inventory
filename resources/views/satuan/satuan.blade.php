@@ -1,5 +1,6 @@
 @extends('template')
 @section('content')
+@include('sweetalert::alert')
 <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
@@ -30,7 +31,7 @@
                           <td>
 				<a href="/satuan/edit/{{ $s->id }}">Edit</a>
 				|
-				<a href="/satuan/hapus/{{ $s->id }}">Hapus</a>
+				<a href="/satuan/hapus/{{ $s->id }}" class="btn btn-danger delete">Hapus</a>
 			</td>            
                         </tr>  
                       </tbody>
