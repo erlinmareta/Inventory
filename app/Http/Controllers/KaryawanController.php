@@ -36,7 +36,7 @@ DB::table('karyawan')->insert([
     'hp' => $request->hp,
 ]);
 // alihkan halaman user
-return redirect('/karyawan/karyawan');
+return redirect('/karyawan/karyawan')->with('success', 'Data Berhasil ditambahkan!');
 
 }
 
@@ -61,7 +61,7 @@ DB::table('karyawan')->where('id',$request->id)->update([
     'hp' => $request->hp,
 ]);
 // alihkan halaman ke halaman user
-return redirect('/karyawan/karyawan');
+return redirect('/karyawan/karyawan')->with('success', 'Data Berhasil diubah!');
 }
 
 public function hapus($id)
@@ -70,7 +70,7 @@ public function hapus($id)
 DB::table('karyawan')->where('id',$id)->delete();
     
 // alihkan halaman ke halaman user
-return redirect('/karyawan/karyawan');
+return redirect('/karyawan/karyawan')->with('success', 'Data Berhasil dihapus!');
 
 }
 public function detail($id)
