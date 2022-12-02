@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Barang;
-
-use App\Models\Supplier;
+use App\Models\JenisBarang;
 
 use Illuminate\Support\Facades\DB;
 
@@ -24,11 +23,11 @@ class BarangController extends Controller
 public function tambah()
 {
 	$barang = Barang::all();
-	$supplier = Supplier::all();
+	$jenisbarang = JenisBarang::all();
 	
 
 	// memanggil view tambah
-	return view('barang/tambah',['supplier' => $supplier]);
+	return view('barang/tambah',['jenisbarang' => $jenisbarang]);
  
 }
 public function store(Request $request)
@@ -36,7 +35,8 @@ public function store(Request $request)
 	$barang = new Barang();
 	$barang->name = $request->name;
 	$barang->kode = $request->kode;
-	$barang->id_suplier = $request->nama;
+	$barang->stok = $request->stok;
+	$barang->id_jenisbarang = $request->nama;
 	$barang->save();
 
 	// alihkan halaman ke halaman barang
@@ -48,23 +48,21 @@ public function edit($id)
 {
 
 	$barang = Barang::findorfail($id);
-	$supplier = Supplier::all();
+	$jenisbarang = JenisBarang::all();
 	
-	return view('barang/edit',['barang' => $barang , 'supplier' => $supplier]);
+	return view('barang/edit',['barang' => $barang , 'jenisbarang' => $jenisbarang]);
  
 }
-public function update(Request $request, $id)
+public function update(Request $request)
 {
-	$barang = Barang::findorfail($id);
-	$barang_data = [
-		'name' => $request->name,
-		'kode' => $request->kode,
-		'id_suplier' => $request->id_suplier,
+		// update data satuan
+		DB::table('barang')->where('id',$request->id)->update([
+			'id_jenisbarang' => $request->id_jenisbarang,
+			'name' => $request->name,
+			'kode' => $request->kode,
+			'stok' => $request->stok,
+		]);
 		
-	];
-	$barang->update($barang_data);
-	
-	// alihkan halaman ke halaman barang
 	return redirect('/barang/barang');
 }
 

@@ -20,7 +20,8 @@
                           <th>No</th>
                           <th>Nama Barang</th>
                           <th>Kode</th>
-                          <th>Supllier</th>
+                          <th>Jenis Barang</th>
+                          <th>Stok</th>
                           <th>Action</th>
                         </tr>
                       </thead>
@@ -30,8 +31,8 @@
                           <td>{{ $no++ }}</td>
                           <td>{{ $b->name }} </td>
                           <td>{{ $b->kode }} </td>
-                          <td>{{ $b->supplier->nama }} </td>
-                         
+                          <td>{{ $b->jenisbarang->nama}} </td>
+                          <td>{{ $b->stok }} </td>
                           <td>
 				<a href="/barang/edit/{{ $b->id }}">Edit</a>
 				|

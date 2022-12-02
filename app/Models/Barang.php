@@ -12,12 +12,12 @@ class Barang extends Model
     protected $table = "barang" ;
     protected $primarykey = "id" ;
     protected $fillable = [
-        'id', 'id_suplier', 'name', 'kode', 
+        'id', 'id_jenisbarang', 'name', 'kode', 'stok'
     ];
 
-    public function supplier()
+    public function jenisbarang()
     {
-        return $this->belongsTo(supplier::class,'id_suplier');
+        return $this->belongsTo(jenisbarang::class,'id_jenisbarang');
     }
 
 }

@@ -26,10 +26,10 @@
                     </div>
                  </div>
 
-                 <label class="sr-only" for="inlineFormInputName2">Supplier</label>
-                        <select type="text" name="nama" class="form-control mb-2 mr-sm-2" id="nama" placeholder="Nama Supplier" required="required">
-                           <option >Pilih Supplier</option>
-                           @foreach ($supplier as $s)
+                 <label class="sr-only" for="inlineFormInputName2">Jenis Barang</label>
+                        <select type="text" name="nama" class="form-control mb-2 mr-sm-2" id="nama" placeholder="Nama Jenis Barang" required="required">
+                           <option >Pilih Jenis Barang</option>
+                           @foreach ($jenisbarang as $s)
                            <option value="{{ $s->id}}">{{$s->nama}}</option>
                            @endforeach
                         </select>
@@ -39,6 +39,13 @@
                  
                     </div>
                  </div>
+                 <label class="sr-only" for="inlineFormInputName2">Stok Barang</label>
+                        <input type="text" name="stok" class="form-control mb-2 mr-sm-2" id="stok" placeholder="Stok Barang" required="required">
+                    <div class="input-group mb-2 mr-sm-2">
+                 <div class="input-group-prepend">                   
+                    </div>
+                 </div>
+
 
                  
 

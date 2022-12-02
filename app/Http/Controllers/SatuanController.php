@@ -26,11 +26,11 @@ public function tambah()
 }
 public function store(Request $request)
 {
-	// insert data ke table satuan
-	$satuan = new Satuan();
-	$satuan->nama = $request->nama;
-	$supplier->save();
-	
+	// insert data ke table pegawai
+	DB::table('satuan')->insert([
+		'nama' => $request->nama,
+	]);
+	// alihkan halaman ke halaman pegawai
 	return redirect('/satuan/satuan');
  
 }

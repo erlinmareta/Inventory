@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\SuppplierController;
+use App\Http\Controllers\BarangKeluarController;
 
 
 /*
@@ -58,7 +59,7 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/barang/tambah','BarangController@tambah');
     Route::post('/barang/store','BarangController@store');
     Route::get('/barang/edit/{id}','BarangController@edit');
-    Route::post('/barang/update{id}','BarangController@update');
+    Route::post('/barang/update','BarangController@update');
     Route::get('/barang/hapus/{id}','BarangController@hapus');
     
 
@@ -81,6 +82,15 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/supplier/hapus/{id}','SupplierController@hapus');
     
 
+    // barang keluar
+    Route::get('/barang_keluar/barangkeluar','BarangKeluarController@index');
+    // Route::get('/barang_keluar/tambah','BarangKeluarController@tambah');
+    // Route::post('/barang_keluar/store','BarangKeluarController@store');
+    // Route::get('/barang_keluar/edit/{id}','BarangKeluarController@edit');
+    // Route::post('/barang_keluar/update','BarangKeluarController@update');
+    // Route::get('/barang_keluar/hapus/{id}','BarangKeluarController@hapus');
+
+   
 });
 
 
