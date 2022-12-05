@@ -32,7 +32,7 @@
 
                     <div class="form-group">
                       <label for="exampleInputEmail3">Tanggal</label>
-                      <input type="date" class="form-control" name="tanggal" id="tanggal" placeholder="Name" value="{{ $s->tanggal }}" required="required">
+                      <input type="date" class="form-control" name="date" id="date" placeholder="Name" value="{{ $s->date }}" required="required">
                     </div>
 
                     <div class="form-group">

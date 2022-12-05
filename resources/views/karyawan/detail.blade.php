@@ -24,7 +24,7 @@
                         </p>
                         <br>
                         <p>
-                            Tanggal Awal Masuk Kerja : {{ $s->tanggal }}
+                            Tanggal Awal Masuk Kerja : {{ $s->date }}
                         </p>
                         <br>
                         <p>
@@ -38,6 +38,6 @@
                 </div>
             </div>
             </div>
-        </div>
+        </div></div>
 </div>
             @endsection

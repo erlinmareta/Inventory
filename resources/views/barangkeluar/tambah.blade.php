@@ -9,38 +9,40 @@
                   <h4 class="card-title">ADD DATA BARANG</h4>
                   <p class="card-description">
                     Form tambah data Barang</p>
-                    <form action="/barang/store" method="post">
+                    <form action="/barangkeluar/store" method="post">
                     {{ csrf_field() }}
                   <form class="form-inline">
-                    <label class="sr-only" for="inlineFormInputName2">Nama Barang</label>
-                        <input type="text" name="name" class="form-control mb-2 mr-sm-2" id="name" placeholder="Nama Barang" required="required">
+                    <label class="sr-only" for="inlineFormInputName2">No Keluar</label>
+                        <input type="text" name="nokeluar" class="form-control mb-2 mr-sm-2" id="nokeluar" placeholder="Nama Barang" required="required">
                     <div class="input-group mb-2 mr-sm-2">
                  <div class="input-group-prepend">                   
                     </div>
                  </div>
                  
-                 <label class="sr-only" for="inlineFormInputName2">Kode Barang</label>
-                        <input type="text" name="kode" class="form-control mb-2 mr-sm-2" id="kode" placeholder="Kode Barang" required="required">
+                 <label class="sr-only" for="inlineFormInputName2">Nama Barang</label>
+                        <select type="text" name="id_barang" class="form-control mb-2 mr-sm-2" id="id_barang" placeholder="Nama Jenis Barang" required="required">
+                           <option >Pilih Nama Barang</option>
+                           @foreach ($barang as $s)
+                           <option value="{{ $s->id}}">{{$s->name}}</option>
+                           @endforeach
+</select>
+
+
+                 <label class="sr-only" for="inlineFormInputName2">Tanggal Keluar</label>
+                        <input type="date" name="date" class="form-control mb-2 mr-sm-2" id="date" placeholder="Tanggal Masuk" value="<?=date('Y-m-d')?>" required="required">
                     <div class="input-group mb-2 mr-sm-2">
                  <div class="input-group-prepend">                   
                     </div>
                  </div>
 
-                 <label class="sr-only" for="inlineFormInputName2">Jenis Barang</label>
-                        <select type="text" name="nama" class="form-control mb-2 mr-sm-2" id="nama" placeholder="Nama Jenis Barang" required="required">
-                           <option >Pilih Jenis Barang</option>
-                           @foreach ($jenisbarang as $s)
-                           <option value="{{ $s->id}}">{{$s->nama}}</option>
-                           @endforeach
-                        </select>
                     <div class="input-group mb-2 mr-sm-2">
                  <div class="input-group-prepend">  
                   
                  
                     </div>
                  </div>
-                 <label class="sr-only" for="inlineFormInputName2">Stok Barang</label>
-                        <input type="text" name="stok" class="form-control mb-2 mr-sm-2" id="stok" placeholder="Stok Barang" required="required">
+                 <label class="sr-only" for="inlineFormInputName2">Jumlah Barang</label>
+                        <input type="number" name="jumlah" class="form-control mb-2 mr-sm-2" id="jumlah" placeholder="Jumlah Barang Masuk" required="required">
                     <div class="input-group mb-2 mr-sm-2">
                  <div class="input-group-prepend">                   
                     </div>
@@ -53,5 +55,6 @@
                   </form>
                 </div>
               </div>
-            </div>       </div>
+            </div>      
+         </div>
             @endsection

@@ -13,10 +13,11 @@
          
                     <form action="/jenisbarang/update" method="post">
                     {{ csrf_field() }}
-                  <form class="form-inline">
+                    <form class="forms-sample">
                   <input type="hidden" name="id" value="{{ $j->id }}">
-                    <label class="sr-only" for="inlineFormInputName2">Nama</label>
-                    <input type="text" name="nama" class="form-control mb-2 mr-sm-2" id="nama" placeholder="Nama Jenis Barang" value="{{ $j->nama }}" required="required">
+                  <div class="form-group">
+                      <label for="exampleInputEmail3">Nama</label>
+                    <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama Jenis Barang" value="{{ $j->nama }}" required="required">
                   
               
                     <div class="input-group mb-2 mr-sm-2">
@@ -29,5 +30,5 @@
                   @endforeach
                 </div>
               </div>
-            </div>       </div>
+            </div>       </div></div>
             @endsection

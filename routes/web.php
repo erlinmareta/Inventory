@@ -7,6 +7,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\SuppplierController;
+use App\Http\Controllers\BarangKeluarController;
+
 
 
 /*
@@ -81,6 +83,19 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/supplier/hapus/{id}','SupplierController@hapus');
     
 
+     //barang masuk
+     Route::get('/barangmasuk/barangmasuk','BarangMasukController@index');
+     Route::get('/barangmasuk/tambah','BarangMasukController@create');
+     Route::post('/barangmasuk/store','BarangMasukController@store');
+     Route::get('/barangmasuk/hapus/{id}','BarangMasukController@hapus');
+
+   //barang keluar
+   Route::get('/barangkeluar/barangkeluar','BarangKeluarController@index');
+   Route::get('/barangkeluar/tambah','BarangKeluarController@create');
+   Route::post('/barangkeluar/store','BarangKeluarController@store');
+   
+
+   
 });
 
 

@@ -19,6 +19,8 @@
                         <?php $no=1; ?>
                           <th>No</th>
                           <th>Nama</th>
+                          <th>Alamat</th>
+                          <th>No.Handphone</th>
                           <th>Email</th>
                           <th>Action</th>
                         </tr>
@@ -28,6 +30,8 @@
                         <tr>
                           <td>{{ $no++ }}</td>
                           <td>{{ $s->name }} </td>
+                          <td>{{ $s->alamat }} </td>
+                          <td>{{ $s->hp }} </td>
                           <td>{{ $s->email }} </td>
                           <td>
 				<a href="/user/edit/{{ $s->id }}">Edit</a>

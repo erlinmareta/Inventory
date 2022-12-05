@@ -32,6 +32,8 @@ DB::table('users')->insert([
     'name' => $request->name,
     'email' => $request->email,
     'password' => $request->password,
+    'alamat' => $request->alamat,
+    'hp' => $request->hp,
 ]);
 // alihkan halaman user
 return redirect('/user/user');
@@ -55,6 +57,8 @@ DB::table('users')->where('id',$request->id)->update([
     'name' => $request->name,
     'email' => $request->email,
     'password' => $request->password,
+    'alamat' => $request->alamat,
+    'hp' => $request->hp,
 ]);
 // alihkan halaman ke halaman user
 return redirect('/user/user');

@@ -29,7 +29,7 @@ public function store(Request $request)
 		'nama' => $request->nama,
 	]);
 	// alihkan halaman ke halaman pegawai
-	return redirect('/jenis/jenisbarang');
+	return redirect('/jenis/jenisbarang')->with('success', 'Berhasil ditambahkan!');
  
 }
 public function edit($id)
@@ -47,7 +47,7 @@ public function update(Request $request)
 		'nama' => $request->nama,
 	]);
 	// alihkan halaman ke halaman jenis barang 
-	return redirect('/jenis/jenisbarang');
+	return redirect('/jenis/jenisbarang')->with('success', 'Data Berhasil diubah!');
 }
 public function hapus($id)
 {
@@ -55,6 +55,6 @@ public function hapus($id)
 	DB::table('jenisbarang')->where('id',$id)->delete();
 		
 	// alihkan halaman ke halaman jenis barang
-	return redirect('/jenis/jenisbarang');
+	return redirect('/jenis/jenisbarang')->with('success', 'Data Berhasil dihapus!');
 }
 }
