@@ -296,14 +296,14 @@
           </li>
           <li class="nav-item nav-category">Datas</li>
           <li class="nav-item">
-            <a class="nav-link" href="#" aria-controls="icons">
+            <a class="nav-link" href="/barangkeluar/barangkeluar" aria-controls="icons">
               <i class="menu-icon mdi mdi-layers-outline"></i>
               <span class="menu-title">Barang Keluar</span>
             </a>
             
 
             <li class="nav-item">
-            <a class="nav-link" href="#"  aria-controls="icons">
+            <a class="nav-link" href="/barangmasuk/barangmasuk"  aria-controls="icons">
               <i class="menu-icon mdi mdi-layers-outline"></i>
               <span class="menu-title">Barang Masuk</span>
             </a>

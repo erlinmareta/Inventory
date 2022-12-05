@@ -10,6 +10,7 @@ use App\Http\Controllers\SuppplierController;
 use App\Http\Controllers\BarangKeluarController;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -82,13 +83,17 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/supplier/hapus/{id}','SupplierController@hapus');
     
 
-    // barang keluar
-    Route::get('/barang_keluar/barangkeluar','BarangKeluarController@index');
-    // Route::get('/barang_keluar/tambah','BarangKeluarController@tambah');
-    // Route::post('/barang_keluar/store','BarangKeluarController@store');
-    // Route::get('/barang_keluar/edit/{id}','BarangKeluarController@edit');
-    // Route::post('/barang_keluar/update','BarangKeluarController@update');
-    // Route::get('/barang_keluar/hapus/{id}','BarangKeluarController@hapus');
+     //barang masuk
+     Route::get('/barangmasuk/barangmasuk','BarangMasukController@index');
+     Route::get('/barangmasuk/tambah','BarangMasukController@create');
+     Route::post('/barangmasuk/store','BarangMasukController@store');
+     Route::get('/barangmasuk/hapus/{id}','BarangMasukController@hapus');
+
+   //barang keluar
+   Route::get('/barangkeluar/barangkeluar','BarangKeluarController@index');
+   Route::get('/barangkeluar/tambah','BarangKeluarController@create');
+   Route::post('/barangkeluar/store','BarangKeluarController@store');
+   
 
    
 });
