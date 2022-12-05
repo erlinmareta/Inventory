@@ -40,7 +40,7 @@ public function store(Request $request)
 	$barang->save();
 
 	// alihkan halaman ke halaman barang
-	return redirect('/barang/barang');
+	return redirect('/barang/barang')->with('success', 'Berhasil ditambahkan!');
  
 }
 
@@ -63,7 +63,7 @@ public function update(Request $request)
 			'stok' => $request->stok,
 		]);
 		
-	return redirect('/barang/barang');
+	return redirect('/barang/barang')->with('success', 'Berhasil diubah!');
 }
 
 public function hapus($id)
@@ -72,7 +72,7 @@ public function hapus($id)
 	DB::table('barang')->where('id',$id)->delete();
 		
 	// alihkan halaman ke halaman satuan
-	return redirect('/barang/barang');
+	return redirect('/barang/barang')->with('success', 'Berhasil dihapus!');
 
 }
 

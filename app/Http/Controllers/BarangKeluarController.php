@@ -36,7 +36,7 @@ class BarangKeluarController extends Controller
 
         if($barang->stok < $request->jumlah)
         {
-            return redirect('/barangkeluar/tambah')->with('error', 'Jumlah Barang Lebig Dari Stok Yang Ada');
+            return redirect('/barangkeluar/tambah')->with('error', 'Jumlah Barang Lebih Dari Stok Yang Ada');
         }
         else{
             barangkeluar::create([
