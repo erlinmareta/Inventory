@@ -1,6 +1,7 @@
 @extends('template')
 @section('content')
 @include('sweetalert::alert')
+<link rel="stylesheet" href="{{ asset ('font/css/all.min.css')}}">
 <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
@@ -11,7 +12,7 @@
                 <div class="card-body">
                   <h4 class="card-title">JENIS BARANG</h4>
                   <p class="card-description">
-                    Tabel Jenis Barang <code><a href="/jenisbarang/tambah"> + Add Data</a>
+                    Tabel Jenis Barang <code><a class="btn btn-sm btn-success-outline" href="/jenisbarang/tambah" title="Tambah"><span class="fa fa-circle-plus"></span> Tambah Data</a>
                   </p>
                   <div class="table-responsive pt-3">
                     <table class="table table-bordered">
@@ -29,10 +30,9 @@
                           <td>{{ $no++ }}</td>
                           <td>{{ $j->nama }} </td>
                           <td>
-				<a href="/jenisbarang/edit/{{ $j->id }}">Edit</a>
-				|
-				<a href="/jenisbarang/hapus/{{ $j->id }}">Hapus</a>
-			</td>            
+                          <a class="btn btn-sm btn-success-outline" href="/jenisbarang/edit/{{ $j->id }}" title="Edit"><span class="fa fa-edit"></span> Edit</a>
+                          <a class="btn btn-sm btn-success-outline" href="/jenisbarang/hapus/{{ $j->id }}" title="Hapus"><span class="fa fa-trash"></span> Hapus</a>
+			                    </td>            
                         </tr>  
                       </tbody>
                       @endforeach
