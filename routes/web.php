@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JenisBarangController;
 use App\Http\Controllers\SatuanController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\SuppplierController;
@@ -31,6 +32,7 @@ Route::get('/', function () {
 Route::group(['middleware' => 'auth'], function(){
     Route::get('/dashboard', function(){return view('dashboard');});
 
+    Route::get('/dashboard','HomeController@index');
     // jenis
     Route::get('/jenis/jenisbarang','JenisBarangController@index');
     Route::get('/jenisbarang/tambah','JenisBarangController@tambah');

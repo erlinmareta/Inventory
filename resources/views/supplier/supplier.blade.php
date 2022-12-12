@@ -34,9 +34,9 @@
                           <td>{{ $s->alamat }} </td>
                           <td>{{ $s->hp }} </td>
                           <td>
-				<a href="/supplier/edit/{{ $s->id }}">Edit</a>
+				<a href="/supplier/edit/{{ $s->id }} "> Edit</a>
 				|
-				<a href="/satuan/hapus/{{ $s->id }}">Hapus</a>
+				<a href="/satuan/hapus/{{ $s->id }}"> <i class="fa-thin fa-trash"></i>Hapus</a>
 			</td>            
                         </tr>  
                       </tbody>

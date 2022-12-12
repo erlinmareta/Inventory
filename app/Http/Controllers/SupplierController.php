@@ -28,14 +28,14 @@ public function tambah()
 }
 public function store(Request $request)
 {
-	// insert data ke table satuan
+	
 	$supplier = new Supplier();
 	$supplier->nama = $request->nama;
 	$supplier->alamat = $request->alamat;
 	$supplier->hp = $request->hp;
 	$supplier->save();
 	
-	// alihkan halaman ke halaman satuan
+	
 	return redirect('/supplier/supplier')->with('success', 'Berhasil ditambahkan!');
  
 }
@@ -50,21 +50,22 @@ public function edit($id)
 }
 public function update(Request $request)
 {
-	// update data satuan
+
 	DB::table('supplier')->where('id',$request->id)->update([
 		'nama' => $request->nama,
         'alamat' => $request->alamat,
         'hp' => $request->hp,
 	]);
-	// alihkan halaman ke halaman satuan
+
 	return redirect('/supplier/supplier')->with('success', 'Data Berhasil diubah!');
 }
+
 public function hapus($id)
 {
-	// menghapus data pegawai berdasarkan id yang dipilih
+
 	DB::table('supplier')->where('id',$id)->delete();
 		
-	// alihkan halaman ke halaman satuan
+
 	return redirect('/supplier/supplier')->with('success', 'Data Berhasil dihapus!');
 
 }

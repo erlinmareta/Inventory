@@ -16,18 +16,24 @@
                         <div class="statistics-details d-flex align-items-center justify-content-between">
                           <div>
                             <p class="statistics-title">Data User</p>
-                            <h3 class="rate-percentage">5</h3>
+                            <h3 class="rate-percentage">{{$user}}</h3>
                           
                           </div>
 
                           <div>
                             <p class="statistics-title">Data Barang</p>
-                            <h3 class="rate-percentage">150</h3>
+                            <h3 class="rate-percentage">{{$barang}}</h3>
              
                           </div>
                           <div class="d-none d-md-block">
                             <p class="statistics-title">Data Supplier</p>
-                            <h3 class="rate-percentage">29</h3>
+                            <h3 class="rate-percentage">{{$supplier}}</h3>
+          
+                          </div>
+
+                          <div class="d-none d-md-block">
+                            <p class="statistics-title">Data Supplier</p>
+                            <h3 class="rate-percentage">{{$karyawan}}</h3>
           
                           </div>
                        
@@ -40,11 +46,11 @@
                           <div class="col-md-6 col-lg-12 grid-margin stretch-card">
                             <div class="card bg-primary card-rounded">
                               <div class="card-body pb-0">
-                                <h4 class="card-title card-title-dash text-white mb-4">Data Barang Masuk</h4>
+                                <h4 class="card-title card-title-dash text-white mb-4">Data Barang Masuk hari ini</h4>
                                 <div class="row">
                                   <div class="col-sm-4">
                                     <p class="status-summary-ight-white mb-1">Jumlah</p>
-                                    <h2 class="text-info">357</h2>
+                                    <h2 class="text-info">{{$brg_masuk_today}}</h2>
                                   </div>
                                   <div class="col-sm-8">
                                     <div class="status-summary-chart-wrapper pb-4">
@@ -59,11 +65,11 @@
                           <div class="col-md-6 col-lg-12 grid-margin stretch-card">
                             <div class="card bg-primary card-rounded">
                               <div class="card-body pb-0">
-                                <h4 class="card-title card-title-dash text-white mb-4">Data Barang Keluar</h4>
+                                <h4 class="card-title card-title-dash text-white mb-4">Data Barang Keluar hari ini</h4>
                                 <div class="row">
                                   <div class="col-sm-4">
                                     <p class="status-summary-ight-white mb-1">Jumlah</p>
-                                    <h2 class="text-info">322</h2>
+                                    <h2 class="text-info">{{$brg_keluar_today}}</h2>
                                   </div>
                                   <div class="col-sm-8">
                                     <div class="status-summary-chart-wrapper pb-4">
