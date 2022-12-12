@@ -20,7 +20,7 @@ class BarangKeluarController extends Controller
        
  
     	// mengirim data pegawai ke view index
-    	return view('barangkeluar/barangkeluar',['barangkeluar' => $barangkeluar]);
+    	return view('barangkeluar/barangkeluar',['barangkeluar' => $barangkeluar, 'barang' => $barang]);
 }
     public function create()
     {

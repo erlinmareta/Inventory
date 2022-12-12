@@ -18,7 +18,8 @@ class BarangMasukController extends Controller
     	// mengambil data dari table pegawai
     	$barangmasuk = BarangMasuk::join('barang', 'barang.id', '=', 'barangmasuk.id_barang')
                     ->join('supplier', 'supplier.id', '=', 'barangmasuk.id_supplier')
-                    ->select('barangmasuk.*', 'supplier.nama')
+                    ->select('barangmasuk.*', 'supplier.nama', 'barang.name')
+                    
                     ->get();
 
         $barang = Barang::all();

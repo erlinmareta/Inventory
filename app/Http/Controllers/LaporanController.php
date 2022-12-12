@@ -26,7 +26,7 @@ class LaporanController extends Controller
 
         $barang = Barang::all();
         $supplier = Supplier::all();
-
+      
  
         // mengirim data pegawai ke view index
         return view('laporanbarangmasuk/laporanbarangmasuk',['laporanbarangmasuk' => $laporanbarangmasuk]);
@@ -48,7 +48,7 @@ class LaporanController extends Controller
 
         $barang = Barang::all();
         $supplier = Supplier::all();
-
+        $user = DB::table('users')->get();
         // $sum_total = BarangKeluar::whereBetween('barangmasuk.tgl_brg_masuk', [$tgl_mulai,$tgl_selesai])
         //                 ->sum('total');
 
@@ -57,7 +57,7 @@ class LaporanController extends Controller
         //                         ->get();
         // } 
         // mengirim data pegawai ke view index
-        return view('laporanbarangmasuk/cetakbarangmasuk',['cetakbarangmasuk' => $cetakbarangmasuk]);
+        return view('laporanbarangmasuk/cetakbarangmasuk',['cetakbarangmasuk' => $cetakbarangmasuk, 'user' => $user]);
     }
 
     public function laporanbarangkeluar()
@@ -95,8 +95,8 @@ class LaporanController extends Controller
         // $barang = Barang::all();
        
  
-
-        return view('laporanbarangkeluar/cetakbarangkeluar',['cetakbarangkeluar' => $cetakbarangkeluar]);
+        $user = DB::table('users')->get();
+        return view('laporanbarangkeluar/cetakbarangkeluar',['cetakbarangkeluar' => $cetakbarangkeluar, 'user' => $user]);
     }
     
     

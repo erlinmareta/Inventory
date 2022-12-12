@@ -25,15 +25,17 @@
                 <td width="150" class="text-center"> </td>
                 <td width="100">Nama Admin</td>
                 <td width="10">:</td>
-                <td width="840">Billy Walter</td>
+                @foreach($user as $u)
+                <td width="840"> {{ $u->name }}</td>
+              
             </tr>
             <td><br></td>
             <tr>
             <td width="100" class="text-center"> </td>
                 <td width="150">E-mail</td>
                 <td width="20">:</td>
-                <td width="350">billy666@gmail.com</td>
-            </tr>
+                <td width="350">{{ $u->email }}</td>
+            </tr>  @endforeach
             <td><br></td>
         </table>
         <hr style="border:1px solid;margin-right:0px;width:800px;">
@@ -42,7 +44,7 @@
                    <tr>
                       <?php $no=1; ?>
                         <th>No</th>
-                        <th>No. Masuk</th>
+                        <th>No. Keluar</th>
                         <th>Nama Barang</th>
                         <th>Supplier</th>
                         <th>Tanggal</th>
@@ -78,16 +80,18 @@
                     <p></p>
                     <br>
                 </td>
-                <td class="text-center" width="500">
-                    <p>Mengetahui Admin</p>
+                <td class="text-center" width="400">
+                    <p>Mengetahui</p>
                     <br>
                     <br>
                     <br>
                     <br>
                     <br>
-                    <u>pew</u>
+    
                     <br>
-                    Billy Walter
+                    @foreach ($user as $u)
+                    {{ $u->name }}
+                    @endforeach
                 </td>
             </tr>
         </table>
