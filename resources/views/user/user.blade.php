@@ -1,5 +1,6 @@
 @extends('template')
 @section('content')
+<link rel="stylesheet" href="{{ asset ('font/css/all.min.css')}}">
 <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
@@ -10,7 +11,7 @@
                 <div class="card-body">
                   <h4 class="card-title">DATA USER</h4>
                   <p class="card-description">
-                    Tabel Data User <code><a href="/user/tambah"> + Add Data</a>
+                    Tabel Data User <code><a class="btn btn-sm btn-success-outline" href="/user/tambah" title="Tambah"><span class="fa fa-circle-plus"></span> Tambah Data</a>
                   </p>
                   <div class="table-responsive pt-3">
                     <table class="table table-bordered">
@@ -34,10 +35,9 @@
                           <td>{{ $s->hp }} </td>
                           <td>{{ $s->email }} </td>
                           <td>
-				<a href="/user/edit/{{ $s->id }}">Edit</a>
-				|
-				<a href="/user/hapus/{{ $s->id }}">Hapus</a>
-			</td>            
+                          <a class="btn btn-sm btn-success-outline" href="/user/edit/{{ $s->id }}" title="Edit"><span class="fa fa-edit"></span> Edit</a>
+                          <a class="btn btn-sm btn-success-outline" href="/user/hapus/{{ $s->id }}" title="Hapus"><span class="fa fa-trash"></span> Hapus</a>
+                        </td>            
                         </tr>  
                       </tbody>
                       @endforeach

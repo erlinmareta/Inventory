@@ -9,6 +9,7 @@ use App\Http\Controllers\BarangController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\SuppplierController;
 use App\Http\Controllers\BarangKeluarController;
+use App\Http\Controllers\LaporanController;
 
 
 
@@ -85,16 +86,24 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/supplier/hapus/{id}','SupplierController@hapus');
     
 
-     //barang masuk
-     Route::get('/barangmasuk/barangmasuk','BarangMasukController@index');
-     Route::get('/barangmasuk/tambah','BarangMasukController@create');
-     Route::post('/barangmasuk/store','BarangMasukController@store');
-     Route::get('/barangmasuk/hapus/{id}','BarangMasukController@hapus');
+    //barang masuk
+    Route::get('/barangmasuk/barangmasuk','BarangMasukController@index');
+    Route::get('/barangmasuk/tambah','BarangMasukController@create');
+    Route::post('/barangmasuk/store','BarangMasukController@store');
+    Route::get('/barangmasuk/hapus/{id}','BarangMasukController@hapus');
 
-   //barang keluar
-   Route::get('/barangkeluar/barangkeluar','BarangKeluarController@index');
-   Route::get('/barangkeluar/tambah','BarangKeluarController@create');
-   Route::post('/barangkeluar/store','BarangKeluarController@store');
+    //barang keluar
+    Route::get('/barangkeluar/barangkeluar','BarangKeluarController@index');
+    Route::get('/barangkeluar/tambah','BarangKeluarController@create');
+    Route::post('/barangkeluar/store','BarangKeluarController@store');
+    
+    //laporan masuk
+    Route::get('/laporanbarangmasuk/laporanbarangmasuk','LaporanController@laporanbarangmasuk');
+    Route::get('/laporanbarangmasuk/cetakbarangmasuk','LaporanController@cetakbarangmasuk');
+
+    //laporan keluar
+    Route::get('/laporanbarangkeluar/laporanbarangkeluar','LaporanController@laporanbarangkeluar');
+    Route::get('/laporanbarangkeluar/cetakbarangkeluar','LaporanController@cetakbarangkeluar');
    
 
    

@@ -14,8 +14,10 @@ class BarangController extends Controller
     public function index()
     {
     	// mengambil data dari table pegawai
-    	$barang = Barang::all();
- 
+    	$barang = Barang::join('jenisbarang', 'jenisbarang.id', '=', 'barang.id_jenisbarang')
+				 ->get();
+		$jenisbarang = JenisBarang::all();
+
     	// mengirim data pegawai ke view index
     	return view('barang/barang',['barang' => $barang]);
 }

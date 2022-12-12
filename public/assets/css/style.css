@@ -1270,4 +1270,12 @@ section {
     text-align: center;
     padding: 5px 0;
   }
+@media print {
+    .main-panel {
+      display: none;
+    }
+    .content-wrapper {
+      display: none;
+    }
+  }
 }

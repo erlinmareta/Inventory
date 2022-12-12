@@ -312,12 +312,12 @@
        
           <li class="nav-item nav-category">Laporan</li>
           <li class="nav-item">
-            <a class="nav-link" href=" ">
+            <a class="nav-link" href="/laporanbarangmasuk/laporanbarangmasuk"  aria-controls="icons">
               <i class="menu-icon mdi mdi-file-document"></i>
               <span class="menu-title">Laporan Masuk</span>
             </a>
             <li class="nav-item">
-            <a class="nav-link" href=" ">
+            <a class="nav-link" href="/laporanbarangkeluar/laporanbarangkeluar"  aria-controls="icons">
               <i class="menu-icon mdi mdi-file-document"></i>
               <span class="menu-title">Laporan Keluar</span>
             </a>
