@@ -41,8 +41,8 @@
                       </tbody>
                       @endforeach
                     </table>
-                    <form method="GET" target="_blank" enctype="multipart/form-data" action="/laporanbarangkeluar/cetakbarangkeluar">
-                @csrf
+                    <!-- <form method="GET" target="_blank" enctype="multipart/form-data" action="/laporanbarangkeluar/cetakbarangkeluar">
+                @csrf -->
                 
                 <div class="modal-body">
 
@@ -63,10 +63,10 @@
                  </div>
 
 
-              <div class="modal-footer">
+              <!-- <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal-body"><i class="fa fa-undo"></i> Close</button>
                 <button type="submit" class="btn btn-primary"><i class="fa fa-print"></i> Cetak Data</button></div>
-              
+               -->
               </form>
                   </div>
                 </div>
@@ -82,5 +82,6 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div> -->
+            <br><a class="btn btn-primary mb-2" href="/laporanbarangkeluar/cetakbarangkeluar" title="Cetak"><span class="fa fa-print"></span> Cetak</a></br>
 </div></div>
             @endsection

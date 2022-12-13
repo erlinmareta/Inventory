@@ -21,7 +21,7 @@ class LaporanController extends Controller
 
         $laporanbarangmasuk = BarangMasuk::join('barang', 'barang.id', '=', 'barangmasuk.id_barang')
         ->join('supplier', 'supplier.id', '=', 'barangmasuk.id_supplier')
-        ->select('barangmasuk.*', 'supplier.nama')
+        ->select('barangmasuk.*', 'supplier.nama','barang.name')
         ->get();
 
         $barang = Barang::all();
@@ -43,7 +43,7 @@ class LaporanController extends Controller
         $cetakbarangmasuk = BarangMasuk::join('barang', 'barang.id', '=', 'barangmasuk.id_barang')
                             ->join('supplier', 'supplier.id', '=', 'barangmasuk.id_supplier')
                             // ->whereBetween('barangmasuk.tgl_brg_masuk', [$tgl_mulai,$tgl_selesai])
-                            ->select('barangmasuk.*', 'supplier.nama')
+                            ->select('barangmasuk.*', 'supplier.nama','barang.name')
                             ->get();
 
         $barang = Barang::all();

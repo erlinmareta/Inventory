@@ -56,7 +56,7 @@
                   <tr>
                     <td>{{ $no++ }}</td>
                     <td>{{ $b->nomasuk }} </td>
-                    <td>{{ $b->nama }} </td>
+                    <td>{{ $b->name }} </td>
                     <td>{{ $b->nama}} </td>
                     <td>{{ $b->date}} </td>
                     <td>{{ $b->jumlah }} </td>
@@ -66,8 +66,8 @@
                 @endforeach
         </table>
 
-        <p style="text-align:right;margin-right:125px;">pew,
-            pew</p>
+        <!-- <p style="text-align:right;margin-right:125px;">pew,
+            pew</p> -->
         <table>
             <tr>
                 <td class="text-center" width="500">
@@ -81,7 +81,7 @@
                     <br>
                 </td>
                 <td class="text-center" width="400">
-                    <p>Mengetahui</p>
+                    <p>Mengetahui Admin</p>
                     <br>
                     <br>
                     <br>

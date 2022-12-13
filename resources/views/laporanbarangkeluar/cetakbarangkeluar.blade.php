@@ -16,7 +16,7 @@
 
   <div style="page-break-after:always;">
         <br><br><br>
-        <h3 class="text-center"><b>LAPORAN BUKTI PENGELUARAAN BARANG</b></h3>
+        <h3 class="text-center"><b>LAPORAN BUKTI PENGELUARAN BARANG</b></h3>
         <h3 class="text-center"><b>MY VENTORY</b></h3>
         <p align="center"> Periode Tanggal -blank- s/d -blank-</p> 
     
@@ -46,7 +46,6 @@
                         <th>No</th>
                         <th>No. Keluar</th>
                         <th>Nama Barang</th>
-                        <th>Supplier</th>
                         <th>Tanggal</th>
                         <th>Jumlah</th>
 
@@ -66,8 +65,8 @@
                 @endforeach
         </table>
 
-        <p style="text-align:right;margin-right:125px;">pew,
-            pew</p>
+        <!-- <p style="text-align:right;margin-right:125px;">pew,
+            pew</p> -->
         <table>
             <tr>
                 <td class="text-center" width="500">
@@ -81,7 +80,7 @@
                     <br>
                 </td>
                 <td class="text-center" width="400">
-                    <p>Mengetahui</p>
+                    <p>Mengetahui Admin</p>
                     <br>
                     <br>
                     <br>

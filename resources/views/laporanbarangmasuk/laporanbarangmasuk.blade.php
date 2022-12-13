@@ -34,11 +34,10 @@
                         <tr>
                           <td>{{ $no++ }}</td>
                           <td>{{ $b->nomasuk }} </td>
-                          <td>{{ $b->nama }} </td>
+                          <td>{{ $b->name }} </td>
                           <td>{{ $b->nama}} </td>
                           <td>{{ $b->date}} </td>
                           <td>{{ $b->jumlah }} </td>
-                          
                           
                         </tr>  
                       </tbody>
