@@ -34,12 +34,7 @@
                           <td>{{ $s->nama }} </td>
                           <td>{{ $s->alamat }} </td>
                           <td>{{ $s->hp }} </td>
-                          <td>
-
-				<a href="/supplier/edit/{{ $s->id }} "> Edit</a>
-				|
-				<a href="/satuan/hapus/{{ $s->id }}"> <i class="fa-thin fa-trash"></i>Hapus</a>
-			</td>            
+                          <td>          
                           <a class="btn btn-sm btn-success-outline" href="/supplier/edit/{{ $s->id }}" title="Edit"><span class="fa fa-edit"></span> Edit</a>
                           <a class="btn btn-sm btn-success-outline" href="/satuan/hapus/{{ $s->id }}" title="Hapus"><span class="fa fa-trash"></span> Hapus</a>
                           </td>            

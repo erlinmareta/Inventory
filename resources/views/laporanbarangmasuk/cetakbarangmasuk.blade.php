@@ -18,7 +18,7 @@
         <br><br><br>
         <h3 class="text-center"><b>LAPORAN BUKTI PEMASUKAN BARANG</b></h3>
         <h3 class="text-center"><b>MY VENTORY</b></h3>
-        <p align="center"> Periode Tanggal -blank- s/d -blank-</p>
+        <p align="center"> Periode Tanggal {{request('dateStart')}} s/d {{request('dateEnd')}}</p>
     @foreach($user as $u)
         <table style="padding:15px; font-size:12pt;">
             <tr>
